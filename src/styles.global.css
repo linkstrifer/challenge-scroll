@@ -1,0 +1,11 @@
+body {
+  background-color: #000;
+  color: white;
+  font-family: serif;
+  text-align: center;
+  height: 200vh;
+}
+
+h1 {
+  font-size: 20vh;
+}

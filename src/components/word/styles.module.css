@@ -1,0 +1,17 @@
+.word {
+  border: 1px solid red;
+  font-size: 200px;
+  margin: auto;
+  position: relative;
+  width: 600px;
+}
+
+.dot {
+  background-color: red;
+  content: "";
+  height: 10px;
+  left: 42%;
+  position: absolute;
+  top: 24%;
+  width: 10px;
+}
