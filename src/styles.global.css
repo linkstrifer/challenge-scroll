@@ -2,8 +2,9 @@ body {
   background-color: #000;
   color: white;
   font-family: serif;
-  text-align: center;
   height: 200vh;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h1 {

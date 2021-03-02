@@ -1,31 +1,35 @@
 import { useEffect, useRef, useState } from "react";
-import { word, dot } from "./styles.module.css";
-import { useSpring, animated } from "react-spring";
+import { word, container as containerClass } from "./styles.module.css";
+import Dot from "./dot";
+import Letters from "./word";
 
 function Word({ position: x }) {
   const container = useRef(null);
-  const [top, setTop] = useState(0);
-  const { scale } = useSpring({ scale: x });
+  const [range, setRange] = useState([]);
 
   useEffect(() => {
-    const top = container.current.offsetTop;
-    setTop(top);
-  }, [setTop, container]);
+    const { current } = container;
+    const offsetTop = current.offsetTop;
+    const { height } = current.getBoundingClientRect();
+    const top = offsetTop + height / 2;
 
-  console.log(x);
+    setRange([
+      0,
+      top - window.innerHeight,
+      top - window.innerHeight / 3,
+      top - window.innerHeight / 5,
+    ]);
+  }, [setRange, container]);
 
   return (
-    <h1 className={word} ref={container}>
-      <animated.div
-        className={dot}
-        style={
-          {
-            // transform: scale.interpolate({ range: [], output: []}).interpolate((x) => `scale(${x})`)
-          }
-        }
-      />
-      Link
-    </h1>
+    <div className={containerClass}>
+      <h1 className={word} ref={container}>
+        <Dot range={range} x={x} />
+        <Letters range={range} x={x}>
+          Link
+        </Letters>
+      </h1>
+    </div>
   );
 }
 

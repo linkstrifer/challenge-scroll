@@ -1,17 +1,27 @@
 .word {
-  border: 1px solid red;
   font-size: 200px;
   margin: auto;
-  position: relative;
+  position: sticky;
+  top: 50vh;
+  transform: translateY(-50%);
   width: 600px;
 }
 
 .dot {
-  background-color: red;
+  background-color: white;
+  border-radius: 10px;
   content: "";
   height: 10px;
   left: 42%;
   position: absolute;
   top: 24%;
   width: 10px;
+}
+
+.letter {
+  display: inline-block;
+}
+
+.container {
+  height: 200vh;
 }

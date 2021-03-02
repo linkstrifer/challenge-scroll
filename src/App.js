@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <div className={container}>
-      <Test height={window.innerHeight} />
+      <Test style={{ backgroundColor: "#fff" }} height={window.innerHeight} />
       <Word position={position} />
     </div>
   );
