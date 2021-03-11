@@ -1,7 +1,6 @@
 .word {
   font-size: 200px;
   margin: auto;
-  position: sticky;
   top: 50vh;
   transform: translateY(-50%);
   width: 600px;
@@ -9,19 +8,25 @@
 
 .dot {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 50%;
+  bottom: 67%;
   content: "";
-  height: 10px;
-  left: 42%;
+  filter: url("#goo");
+  height: 31px;
+  left: 25%;
   position: absolute;
-  top: 24%;
-  width: 10px;
+  width: 31px;
 }
 
-.letter {
+.letterContainer {
   display: inline-block;
+  position: relative;
 }
 
 .container {
-  height: 200vh;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }

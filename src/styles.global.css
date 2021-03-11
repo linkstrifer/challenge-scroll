@@ -5,8 +5,13 @@ body {
   height: 200vh;
   margin: 0 auto;
   text-align: center;
+  overflow-x: hidden;
 }
 
 h1 {
   font-size: 20vh;
+}
+
+.effect {
+  filter: url("#goo");
 }
